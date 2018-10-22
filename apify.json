@@ -1,0 +1,12 @@
+{
+	"name": "imagediff",
+	"actId": "mtrunkat/imagediff",
+	"version": {
+		"versionNumber": "0.1",
+		"buildTag": "latest",
+		"envVars": [],
+		"sourceType": "TARBALL",
+		"tarballUrl": "https://api.apify.com/v2/key-value-stores/8gT83gTQN4Zp3o26Y/records/imagediff-0.1.zip?disableRedirect=true"
+	},
+	"template": "basic"
+}

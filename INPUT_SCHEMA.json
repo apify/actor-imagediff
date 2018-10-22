@@ -1,0 +1,33 @@
+{
+    "title": "Image-diff input",
+    "type": "object",
+    "schemaVersion": 1,
+    "required": ["imageUrl1", "imageUrl2"],
+    "properties": {
+        "imageUrl1": {
+            "title": "The first image URL",
+            "type": "string",
+            "description": "URL of the first image to be diffed.",
+            "editor": "textfield"
+        },
+        "imageUrl2": {
+            "title": "The second image URL",
+            "type": "string",
+            "description": "URL of the second image to be diffed.",
+            "editor": "textfield"
+        },
+        "outputAsJpeg": {
+            "title": "Output as JPEG",
+            "type": "boolean",
+            "description": "Outputs resulting image in JPEG format. Default is PNG."
+        },
+        "pixelmatchOptions": {
+            "title": "Pixelmatch options",
+            "type": "object",
+            "description": "Options for pixelmatch package that is used image comparison.",
+            "editor": "json",
+            "default": { "threshold": 0.1 },
+            "prefill": { "threshold": 0.1 }
+        }
+    }
+}
