@@ -8,13 +8,15 @@
             "title": "The first image URL",
             "type": "string",
             "description": "URL of the first image to be diffed.",
-            "editor": "textfield"
+            "editor": "textfield",
+            "prefill": "https://raw.githubusercontent.com/mapbox/pixelmatch/master/test/fixtures/4a.png"
         },
         "imageUrl2": {
             "title": "The second image URL",
             "type": "string",
             "description": "URL of the second image to be diffed.",
-            "editor": "textfield"
+            "editor": "textfield",
+            "prefill": "https://raw.githubusercontent.com/mapbox/pixelmatch/master/test/fixtures/4b.png"
         },
         "outputAsJpeg": {
             "title": "Output as JPEG",
