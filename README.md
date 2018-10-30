@@ -15,6 +15,8 @@ Input consists of 2 images (PNG or JPEG) and other optional parameters:
 
 Default output is an PNG image containing diff of given images. Using options `outputAsJpeg: true` the result my be switched to JPEG format. Parameter `pixelmatchOptions` may contain any parameters supported by [pixelmatch](https://www.npmjs.com/package/pixelmatch#pixelmatchimg1-img2-output-width-height-options) NPM package.
 
+This actor can be used as [synchronous API](https://www.apify.com/docs/api/v2#/reference/actors/run-actor-synchronously/with-input) that returns diff image as response to POST request.
+
 <table>
     <thead>
         <tr>
