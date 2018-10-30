@@ -29,4 +29,4 @@ Default output is an PNG image containing diff of given images. Using options `o
             <td><img src="https://apify-uploads-prod.s3.amazonaws.com/b8b81c5d-bc30-44b9-8def-cba535106d66_OUTPUT.png" style="max-width: 100%" /></td>
         </tr>
     </tbody>
-</table.
+</table>
