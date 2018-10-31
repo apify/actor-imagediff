@@ -4,6 +4,6 @@ exports.SUPPORTED_TYPES = {
     jpg: 'jpg',
 };
 
-exports.SUPPORTED_TYPES_ARRAY = Object.keys(SUPPORTED_TYPES);
+exports.SUPPORTED_TYPES_ARRAY = Object.keys(exports.SUPPORTED_TYPES);
 
 exports.JPEG_QUALITY = 90;
