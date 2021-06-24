@@ -1,16 +1,14 @@
-FROM apify/actor-node-chrome
+FROM apify/actor-node:16
 
-# Copy source code
-COPY . ./
+COPY package*.json ./
 
-# Install default dependencies, print versions of everything
 RUN npm --quiet set progress=false \
  && npm install --only=prod --no-optional \
  && echo "Installed NPM packages:" \
- && npm list \
+ && (npm list || true) \
  && echo "Node.js version:" \
  && node --version \
  && echo "NPM version:" \
  && npm --version
 
-CMD [ "npm", "start" ]
+COPY . ./

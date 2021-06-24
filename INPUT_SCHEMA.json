@@ -2,7 +2,7 @@
     "title": "Image-diff input",
     "type": "object",
     "schemaVersion": 1,
-    "required": ["imageUrl1", "imageUrl2"],
+    "required": ["imageUrl1", "imageUrl2","proxy"],
     "properties": {
         "imageUrl1": {
             "title": "The first image URL",
@@ -30,6 +30,18 @@
             "editor": "json",
             "default": { "threshold": 0.1 },
             "prefill": { "threshold": 0.1 }
+        },
+        "proxy": {
+            "title": "Proxy configuration",
+            "description": "Sets the proxy configuration",
+            "default": {
+                "useApifyProxy": true
+            },
+            "prefill": {
+                "useApifyProxy": true
+            },
+            "type": "object",
+            "editor": "proxy"
         }
     }
 }

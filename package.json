@@ -4,22 +4,15 @@
 	"description": "Returns diff image of two given images.",
 	"main": "src/main.js",
 	"dependencies": {
-		"apify": "^0.8.0",
-		"bluebird": "^3.5.2",
+		"apify": "^1.2.1",
 		"image-convert": "^0.1.33",
-		"pixelmatch": "^4.0.2",
-		"pngjs": "^3.3.3",
-		"request-promise": "^4.2.2",
-		"type-is": "^1.6.16"
+		"pixelmatch": "^5.2.1",
+		"pngjs": "^6.0.0",
+		"type-is": "^1.6.18"
 	},
 	"devDependencies": {
-		"eslint": "^5.7.0",
-		"eslint-config-airbnb": "^17.0.0",
-		"eslint-config-airbnb-base": "^13.0.0",
-		"eslint-plugin-import": "^2.13.0",
-		"eslint-plugin-jsx-a11y": "^6.1.1",
-		"eslint-plugin-promise": "^4.0.1",
-		"eslint-plugin-react": "^7.10.0"
+		"@apify/eslint-config": "^0.1.4",
+		"eslint": "^7.27.0"
 	},
 	"scripts": {
 		"start": "node src/main.js",
