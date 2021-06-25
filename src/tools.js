@@ -1,9 +1,10 @@
-const PNG = require('pngjs').PNG;
+const { PNG } = require('pngjs');
 const pixelmatch = require('pixelmatch');
+const { promisify } = require('util');
 const imgConvert = require('image-convert');
-const Promise = require('bluebird');
 const typeis = require('type-is');
-const fromBuffer = Promise.promisify(imgConvert.fromBuffer);
+
+const fromBuffer = promisify(imgConvert.fromBuffer);
 const { SUPPORTED_TYPES, SUPPORTED_TYPES_ARRAY, JPEG_QUALITY } = require('./consts');
 
 /**
@@ -12,12 +13,14 @@ const { SUPPORTED_TYPES, SUPPORTED_TYPES_ARRAY, JPEG_QUALITY } = require('./cons
  * @return {Promise<Buffer>}
  */
 exports.convertToPng = async (response) => {
-    switch (typeis.is(response, SUPPORTED_TYPES_ARRAY)) {
+    const contentType = typeis.is(response, SUPPORTED_TYPES_ARRAY);
+
+    switch (contentType) {
         case SUPPORTED_TYPES.png:
             return response.body;
         case SUPPORTED_TYPES.jpeg:
         case SUPPORTED_TYPES.jpg:
-            return await fromBuffer({
+            return fromBuffer({
                 buffer: response.body.toString('base64'),
                 quality: 100,
                 output_format: 'png',
@@ -31,8 +34,8 @@ exports.convertToPng = async (response) => {
 /**
  * Computes diff of given PNG image buffers.
  *
- * @param  {Buffer]} pngBuffer1
- * @param  {Buffer]} pngBuffer2
+ * @param  {Buffer} pngBuffer1
+ * @param  {Buffer} pngBuffer2
  * @param  {Object}  options
  * @return {Buffer}
  */
