@@ -1,0 +1,11 @@
+{
+	"actorSpecification": 1,
+    "name": "imagediff",
+	"version": "0.0",
+	"buildTag": "latest",
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "keyValueStore": "./key_value_store_schema.json"
+    }
+}

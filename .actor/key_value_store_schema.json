@@ -1,0 +1,11 @@
+{
+    "actorKeyValueStoreSchemaVersion": 1,
+    "actorSpecification": 1,
+    "name": "Image Difference Generator file output",
+    "collections": {
+        "output": {
+            "title": "Output",
+            "key": "OUTPUT"
+        }
+    }
+}

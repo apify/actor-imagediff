@@ -1,0 +1,15 @@
+{
+    "actorOutputSchemaVersion": 1,
+
+    "title": "Image Difference Generator output",
+    "description": "Image Difference Generators creates a single output file with the difference between two images",
+    "type": "object",
+
+    "properties": {
+        "difference": {
+            "type": "string",
+            "title": "Difference",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/OUTPUT"
+        }
+    }
+}
